@@ -19,18 +19,9 @@ export class CarService {
   }
 
   getFilteredCars(params: any): Observable<any> {
-    let queryParams = new HttpParams();
-    Object.keys(params).forEach((key) => {
-      if (params[key] !== undefined && params[key] !== null) {
-        queryParams = queryParams.set(key, params[key]);
-      }
-    });
-
-    queryParams = queryParams.set("_limit", params["_limit"] || "100");
-    queryParams = queryParams.set("_offset", params["_offset"] || "0");
-
+    const queryParams = new HttpParams({ fromObject: params });
     return this.http
-      .get<any>(`${this.apiUrl}`, { params: queryParams })
+      .get<any>(this.apiUrl, { params: queryParams })
       .pipe(map((response) => response.results));
   }
 }
