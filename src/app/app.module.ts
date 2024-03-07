@@ -6,13 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CarCardComponent } from './car-card/car-card.component';
 import { CarListComponent } from './car-list/car-list.component';
+import { CarDetailsComponent } from './car-details/car-details.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CarCardComponent,
-    CarListComponent
+    CarListComponent,
+    CarDetailsComponent
   ],
   imports: [
     BrowserModule,

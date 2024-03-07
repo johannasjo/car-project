@@ -1,7 +1,10 @@
 <div class="card m-4 border-dark" style="min-width: 800px">
   <div class="card-body">
-    <h2 class="fs-5 card-title">{{ car.modell }}</h2>
-    <p class="card-text">{{ car.nybilspris }}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h2 class="fs-5 card-title mb-2">{{ car.marke }}</h2>
+    <p class="card-text">Tillverkningsår: {{ car.tillverkningsar }}</p>
+    <p class="card-text">Modell: {{ car.modell }}</p>
+    <button class="btn btn-primary mt-2" (click)="viewDetails(car)">
+      Gå till detalj-sidan
+    </button>
   </div>
 </div>

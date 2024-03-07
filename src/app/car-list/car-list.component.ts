@@ -22,7 +22,7 @@ export class CarListComponent implements OnInit {
     }
   
     loadCars(): void {
-      this.carService.getCars().subscribe(cars => {
+      this.carService.getAllCars().subscribe(cars => {
         this.cars = cars;
       });
     }
@@ -42,7 +42,6 @@ export class CarListComponent implements OnInit {
       this.scrollToTop();
     }
 
-  
     scrollToTop() {
       this.carsPage.nativeElement.scrollIntoView();
     }

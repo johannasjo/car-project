@@ -1,0 +1,33 @@
+<div class="d-flex flex-column align-items-center">
+  <h2 class="my-4">Detaljer för {{ car.modell }}</h2>
+  <div style="max-width: 400px" class="my-4">
+    <h3 class="fw-bold fs-5">Additional info:</h3>
+    <p>
+      Greater than ever before. I have a 10 year old son. I'm speaking with
+      myself, number one, because I have a very good brain and I've said a lot
+      of things. It could also be lots of other people. Lorem Ipsum better hope
+      that there are no "tapes" of our conversations before he starts leaking to
+      the press! You have so many different things placeholder text has to be
+      able to do, and I don't believe Lorem Ipsum has the stamina.
+    </p>
+  </div>
+
+  <div class="my-4" style="min-width: 400px">
+    <div class="d-flex justify-content-between">
+      <p>Bränsletyp: {{ car.bransletyp }}</p>
+      <p>Fordonstyp: {{ car.fordonstyp }}</p>
+    </div>
+    <div class="d-flex justify-content-between">
+      <p>Justering: {{ car.justering ? car.justering : "-" }}</p>
+      <p>Märke: {{ car.marke }}</p>
+    </div>
+    <div class="d-flex justify-content-between">
+      <p>Nybilspris: {{ car.nybilspris }}</p>
+      <p>Tillverkningsår: {{ car.tillverkningsar }}</p>
+    </div>
+    <p>
+      Värde efter schablon:
+      {{ car.vardeefterschablon ? car.vardeefterschablon : "-" }}
+    </p>
+  </div>
+</div>
