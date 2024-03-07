@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Car } from '../car.interface';
+
 
 @Component({
   selector: 'app-car-card',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./car-card.component.css']
 })
 export class CarCardComponent {
-
+  @Input() car: Car = { fordonstyp: '', kod: '', modell: '', filskapaddatum: '', tillverkningsar: '', bransletyp: '', justering: '', kodforjamforbarmodell: '', marke: '', nybilspris: '', vardeefterschablon: '' }
 }
